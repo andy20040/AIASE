@@ -14,26 +14,42 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-      # This is where you place your autograding tests
-      # For more information on this runner, see the documentation at: https://github.com/classroom-resources/autograding-io-grader
-      #
-      # For example, you could run a test suite like this:
-      # - name: Run tests
-      #   uses: classroom-resources/autograding-io-grader@v1
-      #     with:
-      #       test-name: Addition Test
-      #       id: addition-test
-      #       command: "./bin/add.sh"
-      #       input: 1 2
-      #       expected-output: 3
-      #       comparison-method: exact
-      #       timeout: 10
+
+    - name: Check content.md
+      id: content-check
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: '檔案檢查 (content.md)'
+        setup-command: '' 
+        command: 'if [ ! -f "content.md" ]; then echo "❌ Missing content.md"; exit 1; else echo "✅ Found content.md"; exit 0; fi'
+        timeout: 10
+        max-score: 30
+
+    - name: Check README.md
+      id: readme-check
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: '檔案檢查 (README.md)'
+        setup-command: '' 
+        command: 'if [ ! -f "README.md" ]; then echo "❌ Missing README.md"; exit 1; else echo "✅ Found README.md"; exit 0; fi'
+        timeout: 10
+        max-score: 30
+
+    - name: Check output folder has files
+      id: output-check
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: '檔案檢查 (output 資料夾)'
+        setup-command: '' 
+        command: 'if [ ! -d "output" ]; then echo "❌ Missing output folder"; exit 1; elif [ -z "$(ls -A output)" ]; then echo "❌ output folder is empty"; exit 1; else echo "✅ Found files in output folder"; exit 0; fi'
+        timeout: 10
+        max-score: 40
+
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
-      # For more information on this runner, see the documentation at https://github.com/classroom-resources/autograding-grading-reporter
-      # To output the results of the tests, you can use the
-      # autograding-grading-reporter action like this:
-      # env:
-      # ADDITION-TEST_RESULTS: "${{ steps.addition - test.outputs.result }}"
-      #     with:
-      #         runners: addition-test
+      env:
+        CONTENT-CHECK_RESULTS: "${{ steps.content-check.outputs.result }}"
+        README-CHECK_RESULTS: "${{ steps.readme-check.outputs.result }}"
+        OUTPUT-CHECK_RESULTS: "${{ steps.output-check.outputs.result }}"
+      with:
+        runners: content-check,readme-check,output-check
