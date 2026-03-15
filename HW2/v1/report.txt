@@ -1,0 +1,11 @@
+LogAlert Scan Report
+Generated : 2026-03-15 14:57:47
+Source    : sample.log
+============================================================
+
+[Keyword: Exception]  (1 match(es))
+----------------------------------------
+  [ALERT-ERROR] Line 1: [2026-03-14 10:10:00] Exception: Database timeout
+
+============================================================
+Total alerts: 1

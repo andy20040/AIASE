@@ -1,0 +1,10 @@
+[2026-03-14 10:00:00] System started normally.
+[2026-03-14 10:05:00] User login successful: admin.
+[2026-03-14 10:10:00] Exception: Database connection timeout.
+[2026-03-14 10:12:00] Disk space running low: 95% used on /dev/sda1.
+[2026-03-14 10:15:22] Failed to upload image: File size too large.
+[2026-03-14 10:20:05] WARN: Multiple login attempts detected from IP 192.168.1.50.
+[2026-03-14 10:25:30] Memory usage spike: 8.5GB / 16GB consumed.
+[2026-03-14 10:30:12] ERROR: NullPointerException in UserController.java:45.
+[2026-03-14 10:35:00] CRITICAL: CPU temperature reached 90°C.
+[2026-03-14 10:40:45] Success: Backup completed to Amazon S3.

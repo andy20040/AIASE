@@ -1,0 +1,16 @@
+LogAlert Scan Report
+Generated : 2026-03-15 15:06:46
+Source    : sample.log
+============================================================
+
+[Keyword: Exception]  (2 match(es))
+----------------------------------------
+  [ALERT-ERROR] Line 3: [2026-03-14 10:10:00] Exception: Database connection timeout.
+  [ALERT-ERROR] Line 8: [2026-03-14 10:30:12] ERROR: NullPointerException in UserController.java:45.
+
+[Keyword: CRITICAL]  (1 match(es))
+----------------------------------------
+  [ALERT-INFO] Line 9: [2026-03-14 10:35:00] CRITICAL: CPU temperature reached 90°C.
+
+============================================================
+Total alerts: 3
