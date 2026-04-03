@@ -1,0 +1,11 @@
+[2026-03-26 10:00:01] INFO: System initialization started.
+[2026-03-26 10:00:05] WARN: Disk usage at 85% on /dev/sda1.
+[2026-03-26 10:05:12] ERROR: ConnectionTimeout after 3000ms.
+[2026-03-26 10:05:15] ERROR: ConnectionError: Peer reset the stream.
+[2026-03-26 10:05:20] INFO: User 'admin' logged in from 192.168.1.105.
+[2026-03-26 10:10:00] ERROR: ConnectRefused: Port 8080 is blocked.
+[2026-03-26 10:12:45] INFO: Periodic database backup successful.
+[2026-03-26 10:15:30] WARN: Memory usage spike detected (92%).
+[2026-03-26 10:20:00] ERROR: DatabaseQueryError: Table 'users' not found.
+[2026-03-26 10:25:00] INFO: Health check passed.
+[2026-03-26 11:00:00] ERROR: ConnectionFailed again!
