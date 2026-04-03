@@ -1,0 +1,3 @@
+[submodule "HW3"]
+	path = HW3
+	url = git@github.com:Netdb-NCKU/hw3-build-your-personal-rag-andy20040.git
