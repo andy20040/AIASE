@@ -20,31 +20,34 @@ your-project/
 ├── README.md           # 專案說明文件
 └── output/             # 渲染後的 HTML 會自動儲存於此資料夾
     └── output.html
+```
 
-3. 環境需求與建置步驟
+## 3. 環境需求與建置步驟
 步驟一：建立並啟動 Python 虛擬環境 (venv)
 為避免套件版本與系統中其他的 Python 專案衝突，強烈建議使用虛擬環境將專案隔離。
 
+```bash
 # 1. 建立名為 .venv 的虛擬環境
 python3 -m venv .venv
 
 # 2. 啟動虛擬環境 (終端機前方會出現 `(.venv)` 標籤)
 source .venv/bin/activate
+```
 
 步驟二：安裝 Python 渲染套件
 透過 pip 讀取清單，一次安裝所有需要的 Python 轉換套件。
 
-
+```bash
 pip install -r requirements.txt
+```
 
-(註：若安裝過程中 WeasyPrint 發生版本衝突，可手動執行 pip install --upgrade weasyprint pydyf 更新底層依賴。)
-
-4. 執行渲染
+## 4. 執行渲染
 確認你的 content.md 已準備好並放置於專案根目錄下。接著，只要執行 Python 腳本即可：
 
-
+```bash
 python render.py
+```
 
-5. 預期輸出
+## 5. 預期輸出
 檔案位置： 渲染完成後，請至 output/output.html，並直接點擊以瀏覽器（如 Chrome, Edge）開啟。
 
