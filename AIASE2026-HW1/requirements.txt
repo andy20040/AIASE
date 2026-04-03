@@ -1,4 +1,0 @@
-markdown==3.6
-Pygments==2.17.2
-pymdown-extensions==10.7
-markdown-katex==202112.1034
