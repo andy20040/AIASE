@@ -1,3 +1,9 @@
 [submodule "HW3"]
 	path = HW3
 	url = git@github.com:Netdb-NCKU/hw3-build-your-personal-rag-andy20040.git
+[submodule "git@github.com:andy20040/AIASE.git"]
+	path = git@github.com:andy20040/AIASE.git
+	url = git@github.com:Netdb-NCKU/hw4-pi-memory-andy20040.git
+[submodule "HW4"]
+	path = HW4
+	url = git@github.com:Netdb-NCKU/hw4-pi-memory-andy20040.git
