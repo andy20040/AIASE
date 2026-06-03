@@ -7,3 +7,6 @@
 [submodule "HW4"]
 	path = HW4
 	url = git@github.com:Netdb-NCKU/hw4-pi-memory-andy20040.git
+[submodule "project"]
+	path = project
+	url = git@github.com:Netdb-NCKU/final-project-andy20040.git
